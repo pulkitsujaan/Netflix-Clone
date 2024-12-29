@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Netflix Sans","Helvetica Neue","Segoe UI","Roboto","Ubuntu",sans-serif;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  background-image: url("assets/images/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: min(2200px, 100vw);
+}
+body{
+  background-color: black;
+}
+.main .box {
+  top: 0;
+  position: absolute;
+  opacity: 0.7;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+nav {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+nav div {
+  position: relative;
+  z-index: 1;
+}
+nav div button {
+  padding: 6px 17px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+}
+
+nav div select {
+  padding: 5px 23px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.279);
+  color: white;
+  border: 1px solid gray;
+}
+
+nav div button:hover {
+  cursor: pointer;
+  background-color: rgb(153, 22, 29);
+  color: rgba(255, 255, 255, 0.7);
+}
+nav img {
+  position: relative;
+  z-index: 1;
+}
+.text{
+    /* display: flex;
+    flex-direction: column; */
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    align-items: center;
+    color: white;
+    width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+.text .heading{
+  max-width: 53vw;
+  margin: auto;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  padding-bottom: 11px;
+}
+.text .sub-heading{
+  max-width: 56vw;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 36px;
+}
+.text .caption{
+  max-width: 56vw;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 18px;
+}
+.text .started{
+  max-width: 45vw;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  gap: 8px;
+}
+.text #email{
+  margin: auto;
+  width: 60vw;
+  height:35px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.306);
+  /* opacity: 0.4; */
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.495);
+}
+
+.get-started{
+
+  width: 35vw;
+  height: 56px;
+  padding: 0px 14px;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.get-started:hover{
+  background-color: rgb(153, 22, 29);
+}
