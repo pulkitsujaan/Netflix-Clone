@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins&display=swap");
 * {
   padding: 0;
   margin: 0;
-  font-family: "Netflix Sans","Helvetica Neue","Segoe UI","Roboto","Ubuntu",sans-serif;
+  font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", "Roboto", "Ubuntu",
+    sans-serif;
 }
 .main {
   position: relative;
@@ -10,9 +10,26 @@
   background-image: url("assets/images/bg.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: min(2200px, 100vw);
+  background-size: max(2200px,100vw)
 }
-body{
+
+::-webkit-scrollbar {
+  height: 12px; /* Minimum height */
+  background: black; /* Black background */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: gray; /* Gray thumb */
+  border-radius: 6px; /* Circular border radius */
+}
+
+/* Hide scrollbar buttons */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+body {
   background-color: black;
 }
 .main .box {
@@ -23,27 +40,41 @@ body{
   width: 100%;
   background-color: black;
 }
+
+.btn-red {
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
 nav {
   display: flex;
-  max-width: 80vw;
+  max-width: 75vw;
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  height: 82px;
 }
 nav div {
   position: relative;
   z-index: 1;
 }
+nav div img{
+  position: relative;
+  transform: translate(27px,1px);
+}
+nav .logo img {
+  width: 144px;
+  position: relative;
+  z-index: 1;
+}
 nav div button {
   padding: 6px 17px;
-  text-align: center;
   font-size: 14px;
   font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  background-color: red;
-  color: white;
+  margin-left: 8px;
 }
 
 nav div select {
@@ -60,26 +91,24 @@ nav div button:hover {
   cursor: pointer;
   background-color: rgb(153, 22, 29);
   color: rgba(255, 255, 255, 0.7);
+  transition-duration: 400ms;
 }
-nav img {
-  position: relative;
-  z-index: 1;
-}
-.text{
-    /* display: flex;
+
+.text {
+  /* display: flex;
     flex-direction: column; */
-    position: relative;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    z-index: 1;
-    align-items: center;
-    color: white;
-    width: 80vw;
-    margin: auto;
-    height: 80vh;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  align-items: center;
+  color: white;
+  width: 80vw;
+  margin: auto;
+  height: 80vh;
 }
-.text .heading{
+.text .heading {
   max-width: 53vw;
   margin: auto;
   text-align: center;
@@ -87,7 +116,7 @@ nav img {
   font-weight: 800;
   padding-bottom: 11px;
 }
-.text .sub-heading{
+.text .sub-heading {
   max-width: 56vw;
   margin: auto;
   text-align: center;
@@ -95,23 +124,24 @@ nav img {
   font-weight: 700;
   padding-bottom: 36px;
 }
-.text .caption{
+.caption {
   max-width: 56vw;
   margin: auto;
   text-align: center;
   padding-bottom: 18px;
+  color: white;
 }
-.text .started{
+.started {
   max-width: 45vw;
   margin: auto;
   text-align: center;
   display: flex;
   gap: 8px;
 }
-.text #email{
+.email {
   margin: auto;
   width: 60vw;
-  height:35px;
+  height: 35px;
   padding: 10px 15px;
   border-radius: 4px;
   border: none;
@@ -123,20 +153,290 @@ nav img {
   border: 1px solid rgba(255, 255, 255, 0.495);
 }
 
-.get-started{
-
-  width: 35vw;
+.get-started {
+  width: 325px;
   height: 56px;
   padding: 0px 14px;
   border-radius: 4px;
   font-size: 24px;
   font-weight: 600;
-  text-align: center;
-  border: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
+  text-wrap-mode: nowrap;
 }
-.get-started:hover{
+.get-started:hover {
   background-color: rgb(153, 22, 29);
+  transition-duration: 400ms;
+}
+
+
+/* Media query for responsiveness in phone */
+@media screen and (max-width:600px) {
+  nav{
+    max-width: 90vw;
+  }
+
+  nav .logo img {
+    width: 100px;
+  }
+  .text .heading {
+    font-size: 38px;
+  }
+  .text .sub-heading{
+    font-size: 14px;
+  }
+  .started{
+    flex-direction: column;
+  }
+
+}
+
+.seperator {
+  content: "";
+  position: relative;
+  /* margin-top: -.25rem; */
+  border-radius: inherit;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+  width: 100%;
+  height: 5px;
+  margin: auto;
+}
+
+.section {
+  display: flex;
+  height: 47px;
+  width: 74vw;
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+  margin: auto;
+  padding: 40px 0px 0px 0px;
+}
+
+.country-span {
+  display: flex;
+  width: 74vw;
+  height: 50px;
+  margin: auto;
+  gap: 20px;
+}
+
+.trending-span {
+  width: 90px;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.trending-span #country {
+  height: 36px;
+  background-color: rgba(40, 40, 40, 0.541);
+  padding: 0px 10px;
+}
+
+.trending-span #movies {
+  background-color: rgba(40, 40, 40, 0.541);
+  height: 36px;
+  padding: 0px 10px;
+  width: 115px;
+}
+
+.top-movies {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  margin: auto;
+  gap: 50px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 0px 23px;
+}
+
+.top-movies ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 45px;
+}
+
+.top-movies ul li {
+  padding-top: 10px;
+  height: 257px;
+}
+
+.top-movies ul li:hover {
+  cursor: pointer;
+  /* zoom: 1.05; */
+  transform: scale(1.05);
+  transition-duration: 400ms;
+}
+
+.top-movies ul li .poster {
+  border-radius: 4px;
+  height: 240px;
+}
+
+.top-movies ul li .r1 {
+  position: relative;
+  z-index: 2;
+  transform: translate(-44px, -106px);
+}
+
+.reasons-grid-container {
+  display: flex;
+  width: 74vw;
+  margin: auto;
+  gap: 15px;
+}
+.reasons-grid-item {
+  width: 18vw;
+  height: 260px;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  border-radius: 15px;
+  padding: 24px 15px;
+  color: white;
+}
+
+
+@media screen and (max-width:960px) {
+  .reasons-grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 74vw;
+    margin: auto;
+    gap: 15px;
+  }  
+  .reasons-grid-item {
+    width: 70vw;
+  }  
+}  
+
+
+.reasons-grid-item h3{
+  font-size: 23px;
+  padding-bottom: 11px;
+}
+
+.reasons-grid-item p{
+  color:rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.reasons-grid-item .grid-item-icon{
+  position: absolute;
+  transform: translate(125px, 70px);
+}
+.reasons-grid-item .grid-item-icon-2{
+  position: relative;
+  transform: translate(125px, 32px);
+}
+.reasons-grid-item .grid-item-icon-3{
+  position: relative;
+  transform: translate(125px, 43px);
+}
+.reasons-grid-item .grid-item-icon-4{
+  position: relative;
+  transform: translate(125px, 23px);
+}
+
+
+.faq-grid-container{
+  display: grid;
+  width: 74vw;
+  margin: auto;
+  gap: 8px;
+}
+.faq-grid-item{
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  font-size: 24px;
+}
+.faq-grid-item:hover{
+  cursor: pointer;
+  background-color: rgb(65, 65, 65);
+  transition-duration: 350ms;
+}
+
+.bottom-container{
+  display: flex;
+  width: 67vw;
+  margin: auto;
+}
+.bottom-email{
+  width: 44vw;
+  background-color: rgba(22, 22, 22, 0.7);
+  color: white;
+}
+
+
+.bottom-btn {
+  width: 16vw;
+  height: 55px;
+  position: relative;
+  transform: translate(-22px,0px);
+}
+
+
+footer{
+  width: 74vw;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+.questions-number{
+  display: flex;
+  padding: 2px;
+  margin-top: 58px;
+  margin-left: 0px;
+  color: rgba(255, 255, 255, 0.7);
+
+}
+
+.questions-number a{
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-grid{
+  display: grid;
+  color: rgba(255, 255, 255, 0.7);
+  padding-top: 36px;
+  padding-left: 3px;
+  padding-bottom: 70px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.footer-grid-item{
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer-lang{
+  display: flex;
+  /* gap: 4px; */
+}
+.footer-select{
+  padding: 5px 23px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.279);
+  color: white;
+  border: 1px solid gray;
+}
+.footer-lang img{
+  position: relative;
+  transform: translate(24px, -1px);
 }
