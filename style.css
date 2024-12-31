@@ -301,7 +301,7 @@ nav div button:hover {
   font-size: 1rem;
   font-weight: 400;
 }
-.reasons-grid-item .grid-item-icon img{
+.reasons-grid-item .grid-item-icon img {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -463,6 +463,9 @@ footer {
   nav .logo img {
     width: 100px;
   }
+  .collapsed{
+    width: calc( 90% - 10px)
+  }
   .text .heading {
     font-size: 32px;
     max-width: 80vw;
@@ -537,11 +540,10 @@ footer {
     right: 0;
   }
 
-
   .faq-grid-container {
     width: 90vw;
   }
-  .faq-grid-item{
+  .faq-grid-item {
     font-size: 1.2rem;
     font-weight: 500;
   }
@@ -553,17 +555,26 @@ footer {
     gap: 10px;
   }
 
-
-  .caption{
-
+  .bottom-caption {
     width: 90vw;
-    margin: auto;
+    margin-left: 5vw;
     text-align: left;
+    margin-right: 0;
+    color: white;
+    padding-bottom: 18px;
   }
-  .bottom-email{
+  .bottom-email {
     width: 83vw;
+    margin: 0;
   }
-  .bottom-btn{
+  .bottom-btn {
     transform: translate(0px, 0px);
+  }
+
+  footer{
+    width: 90vw;
+  }
+  .footer-grid{
+    grid-template-columns: 1fr;
   }
 }
